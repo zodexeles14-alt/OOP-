@@ -1,0 +1,68 @@
+public class Main {
+    public static void main(String[] args){
+        //basically means objects can be defined as many object
+        car car = new car();
+        boat boat = new boat();
+        bike bike = new bike();
+
+        bike.go();
+        boat.go();
+        car.go();
+
+        vehicle[] vehicles= {car, boat, bike};
+        for (vehicle vehicle: vehicles){
+            vehicle.go();
+        }
+
+    }
+}
+
+public interface vechicle {
+
+}
+
+
+public abstract class vehicle {
+
+    abstract void go();
+
+}
+
+public class car extends vehicle{
+
+    @Override
+
+    public void go(){
+
+        System.out.println("you drive the car");
+
+    }
+
+}
+
+public class boat extends vehicle{
+
+    @Override
+
+    public void go(){
+
+        System.out.println("you sail the boat");
+
+    }
+
+
+
+}
+
+public class bike extends vehicle{
+
+    @Override
+
+    public void go(){
+
+        System.out.println("you ride the bike");
+
+    }
+
+}
+
