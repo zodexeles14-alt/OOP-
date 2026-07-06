@@ -1,0 +1,51 @@
+public class Main{
+    public static void main(String[] args){
+       book book1 = new book("memory",456);
+       book book2 = new book("lost a", 1234);
+        book book3 = new book("action now", 1234);
+
+       book[] books = {book1, book2, book3};
+        f
+        System.out.println( book1.displayInfo());
+
+public class library {
+
+}
+
+public class book {
+
+    String title;
+
+    int pages;
+
+
+
+    book(String title,  int pages ){
+
+        this.title = title;
+
+        this.pages = pages;
+
+    }
+
+        String displayInfo(){
+
+            return this.title + " (" + "has " + this.pages + ")pages";
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+}
+
+
