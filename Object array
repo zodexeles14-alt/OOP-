@@ -1,0 +1,47 @@
+public class Main {
+    public static void main(String[] args){
+
+     car car1 =  new car("mustang", " red");
+        car car2 =  new car("supra", " silver");
+        car car3 =  new car("ranger", " black");
+
+        car[] cars = {car1, car2, car3};
+        //or
+//        car[] cars = {new car("mustang", " red"),
+//                      new car("supra", " silver"),
+//                      new car("ranger", " black")};
+//
+
+
+        }
+       //or
+//        for (car car : cars){
+//            car.drive();
+//        }
+        for (int i = 0; i < cars.length; i++){
+            cars[i].color = "black";
+        }
+         for (int i = 0; i < cars.length; i++){
+        cars[i].drive();
+
+
+
+    }
+}
+public class car {
+    String model;
+    String color;
+
+    car(String model, String color ){
+       this.model = model;
+       this.color = color;
+    }
+
+    void drive(){
+        System.out.println("you drive the" + this.color + " " + this.model);
+    }
+
+
+
+
+}
