@@ -1,0 +1,63 @@
+public class Main{
+    public static void main(String[] args){
+        car car = new car();
+       // System.out.println(car.make);
+
+//        System.out.println(car.isRunning);
+//        car.start();
+//        System.out.println(car.isRunning);
+//        car.stop();
+//        System.out.println(car.isRunning);
+//
+        car.drive();
+        car.brake();
+    }
+}
+
+public class car {
+
+    String make = "ford";
+
+    String model = "mustang";
+
+    int year= 2026;
+
+    double price = 5000.099;
+
+    boolean isRunning= false;
+
+
+
+    void start(){
+
+        isRunning = true;
+
+        System.out.println("start the engine");
+
+    }
+
+
+
+        void stop(){
+
+        isRunning = false;
+
+            System.out.println("stop the engine");
+
+    }
+
+    void drive(){
+
+        System.out.println("you drive the" + model);
+
+    }
+
+    void brake(){
+
+        System.out.println("you park the" + model);
+
+    }
+
+}
+
+
