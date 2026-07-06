@@ -1,0 +1,81 @@
+public class Main {
+    public static void  main(String[] args){
+        person person = new person("tom","riddle");
+        student student =  new student("harry", "porter", 3.2);
+        employee employee = new employee("john", "phasali", 11000);
+
+        person.showName();
+        student.showName();
+        student.showGpa();
+        employee.showSalary();
+
+    }
+}public class person {
+
+    String first;
+
+    String last;
+
+
+
+    person(String first,   String last){
+
+        this.first = first;
+
+        this.last = last;
+
+    }
+
+    void showName(){
+
+        System.out.println(this.first+  " " + this.last);
+
+    }
+
+}
+
+public class student extends person{
+
+    double gpa;
+
+
+
+    student(String first ,String last, double gpa){
+
+        super(first, last);
+
+    }
+
+    void showGpa(){
+
+        System.out.println(this.first + " 's gpa is:" + this.gpa);
+
+    }
+
+
+
+}
+
+public class employee extends person{
+
+
+
+    int salary;
+
+    employee(String first, String last, int salary){
+
+        super(first, last);
+
+        this.salary = salary;
+
+    }
+
+    void showSalary(){
+
+        System.out.println(this.first +"'s salary is: "+ this.salary );
+
+    }
+
+}
+
+
