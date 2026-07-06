@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        //this is when the object we are to use is decided at run tym of the program
+        Scanner scanner = new Scanner(System.in);
+        animal animal;
+        System.out.println("would you like a dog or a cat (1 = dog, 2 = cat)");
+        int choice = scanner.nextInt();
+
+        if (choice == 1){
+            animal = new dog();
+            animal.speak();
+
+        } else if (choice == 2) {
+            animal = new cat();
+            animal.speak();
+
+        }
+
+    }
+}
+
+public abstract class animal {
+
+    abstract void speak();
+
+}
+
+public class cat extends animal{
+
+    @Override
+
+    void speak(){
+
+        System.out.println("the cat goes meow");
+
+    }
+
+}
+
+public class dog extends animal{
+
+    @Override
+
+    void speak(){
+
+        System.out.println("the dog goes woof");
+
+    }
+
+}
+
+
