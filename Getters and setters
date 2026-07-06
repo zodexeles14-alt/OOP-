@@ -1,0 +1,90 @@
+public class Main {
+    public static void main(){
+        //getters and setter
+        //getters -help protect object data and add rules for accessing or modifying them
+        //setter - help when you want some parts attributes to be writable eg is u want the color of the car to be
+        // changeable you can set  the color that is given to us
+
+        car car =  new car("bugatti", "blue", 10000);
+        car.setColor("black");
+        car.setPrice(1000000);
+
+        System.out.println(car.getColor() + " " + car.getModel()+ " is at $" + car.getPrice());
+
+
+
+
+
+    }
+}
+
+
+
+public class car {
+
+   private String model;
+
+    private String color;
+
+    private int price;
+
+
+
+    car( String model, String color, int price){
+
+       this.model = model;
+
+       this.color = color;
+
+       this.price = price;
+
+    }
+
+
+
+    String getModel(){
+
+        return this.model;
+
+    }
+
+    String getColor(){
+
+        return this.color;
+
+    }
+
+    String  getPrice(){
+
+        return "$" + this.price;
+
+    }
+
+
+
+    void setColor(String color){
+
+        this.color = color;
+
+    }
+
+    void setPrice(int price){
+
+       if (price < 0 ){
+
+           System.out.println("price cat be less that zero");
+
+       }
+
+       else {
+
+           this.price = price;
+
+       }
+
+
+
+    }
+
+}
+
