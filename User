@@ -1,0 +1,47 @@
+public class Main{
+    public static void main(String[] args){
+        user user1 = new user("jonan");
+        user user2 = new user( "zode", "zodexele@mail", 17);
+
+
+        System.out.println(user1.userName);
+        System.out.println(user1.email);
+        System.out.println(user1.age);
+
+        System.out.println(user2.userName);
+        System.out.println(user2.email);
+        System.out.println(user2.age);
+    }
+}public class user {
+
+    String userName;
+
+    String email;
+
+    int age;
+
+
+
+    user(String userName){
+
+        this.userName = userName;
+
+        this.email =  "not provided";
+
+        this.age = 0;
+
+    }
+
+    user(String userName, String email, int age){
+
+        this.userName = userName;
+
+        this.email = email;
+
+        this.age = age;
+
+    }
+
+}
+
+
