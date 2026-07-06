@@ -1,0 +1,48 @@
+public class Main{
+    public static void main(String[] args){
+        student student1 = new student("shani", 17, 3.2);
+        student student2 = new student("zodexele", 18, 3.2);
+        student student3 = new student("juliet", 18, 3.2);
+
+      student1.study();
+        student2.study();
+        student3.study();
+
+    }
+}
+
+public class student {
+
+    String name ;
+
+    int age;
+
+    double gpa;
+
+    boolean isEnrolled;
+
+
+
+
+
+    student(String name, int age, double gpa){
+
+        this.name = name;
+
+        this.age = age;
+
+        this.gpa = gpa;
+
+        this.isEnrolled = true;
+
+    }
+
+    void study(){
+
+        System.out.println(this.name + "isStudying");
+
+    }
+
+}
+
+
