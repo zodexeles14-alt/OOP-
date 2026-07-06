@@ -1,0 +1,34 @@
+public class Main{
+    public static void main(String[] args){
+        friend friend1 = new friend("juliet");
+        friend friend2 = new friend("juliet");
+        friend friend3 = new friend("juliet");
+
+        System.out.println(friend.numOfFriends);
+        friend.showFriends();
+    }
+}public class friend {
+
+    String name;
+
+    static int numOfFriends;
+
+
+
+    friend(String name){
+
+        this.name = name;
+
+        numOfFriends++;
+
+    }
+
+    static void  showFriends(){
+
+        System.out.println("you have" + numOfFriends);
+
+    }
+
+}
+
+
