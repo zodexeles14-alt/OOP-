@@ -1,0 +1,49 @@
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Main{
+    public static void main(String[] args){
+    String url= "jdbc:sqlserver://SIMPLYZODEXELE\\MSSQLSERVER01;integratedSecurity=true;trustServerCertificate=true;";
+
+        String createTableAccounts= "CREATE TABLE IF NOT EXIST accounts(" +
+                "card_number VARCHAR PRIMARY KEY," +
+                "cardHolder_name VARCHAR NOT NULL," +
+                "security_code_hash INTEGER NOT NULL," +
+                "balance REAL NOT NULL CHECK(balance >= 0)" +
+                ");";
+
+        String createTransactionTable = "CREATE TABLE IF NOT EXIST accounts(" +
+                "transaction_id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "card_number VARCHAR NOT NULL," +
+                "type TEXT NOT NULL," +
+                "amount REAL NOT NULL," +
+                "timestamp DATETIME DEFAULT CURRENT_TIMESTAMP," +
+                "FOREIGN KEY(card_number)REFERENCES accounts(card-number)" +
+                ");";
+    try(var connection = DriverManager.getConnection(url);
+        Statement stmt = connection.createStatement()){
+
+            stmt.execute(createTableAccounts);
+            stmt.execute(createTransactionTable);
+
+            String sampleCard = "1234567890";
+            String samplePinHash = hashSecurityCode("1234");
+            String insertSample = "INSERT OR IGNORE INTO accounts(card_number, cardHolder_name, security_code_hash, balance)" +
+                    "VALUES (?, ?, ?, ?)";
+
+        } catch (SQLException e) {
+        System.out.println("error with sql");
+    }
+
+        System.out.println("table created successfully");
+    }
+
+    private static String hashSecurityCode(String number) {
+    }
+    catch (SQLException a){
+        a.printStackTrace();
+    }
+    }
+}
+
