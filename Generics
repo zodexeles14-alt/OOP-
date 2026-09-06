@@ -1,0 +1,43 @@
+public class Main{
+    public static void main(String[] args){
+//        box<String> box = new box<>();
+//        box.setItem("banana");
+//        System.out.println(box.getItem());
+        product<String, Double> product = new product<>("Bread", 3000.0);
+        product<String, Integer> product1 = new product<>("ticket", 15000);
+
+    }
+}
+
+public class product <T, U>{
+    T item;
+    U price;
+
+    product(T item, U price){
+        this.item = item;
+        this.price = price;
+    }
+
+    public T getItem(){
+        return this.item;
+    }
+    public U getPrice(){
+        return this.price;
+    }
+
+
+}
+
+
+
+public class box<T> {
+    T item;
+
+    public void setItem(T item){
+       this.item = item;
+    }
+    public T getItem(){
+        return this.item;
+    }
+}
+
