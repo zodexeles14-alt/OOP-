@@ -1,0 +1,21 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Enter a number");
+            int a = scanner.nextInt();
+            System.out.println(a);
+        } catch (ArithmeticException e) {
+            System.out.println("YOU CANT DIVIDE BY ZERO!");
+        } catch (InputMismatchException d) {
+            System.out.println("Thats not a number!");
+        } catch (Exception a) {
+            System.out.println("something went wrong");
+        } finally {
+            System.out.println("this always executes");
+        }
+
+    }
+}
