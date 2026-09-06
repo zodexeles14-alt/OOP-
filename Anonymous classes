@@ -1,0 +1,20 @@
+public class Main{
+    public static void main(String[] args){
+        dog dog1= new dog();
+        dog dog2 = new dog(){
+            @Override
+            void speak() {
+                System.out.println("Scopby Doo goes ruh roh");
+            }
+        };
+        dog1.speak();
+        dog2.speak();
+    }
+}
+
+public class dog {
+    void speak(){
+        System.out.println("the dog goes *woof*");
+    }
+}
+
