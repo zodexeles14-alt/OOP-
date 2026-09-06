@@ -1,0 +1,31 @@
+public class Main{
+    public static  void main(String[] args){
+     car car  =  new car("noah", 2014, "2az");
+        System.out.println(car.model);
+        System.out.println(car.year);
+        System.out.println(car.engine.type);
+    }
+}
+
+public class engine {
+    String type;
+
+    engine(String type){
+      this.type = type;
+    }
+}
+
+public class car {
+    String model;
+    int year;
+    engine engine;
+
+    car(String model, int year, String engineType){
+        this.model =  model;
+        this.year = year;
+        this.engine = new engine(engineType);
+    }
+
+}
+
+
