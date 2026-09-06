@@ -1,0 +1,52 @@
+public class Main{
+    public static void main(String[] args){
+        books book1 = new books("Our long await", 326);
+        books book2 = new books("tinkle", 1234);
+        books book3 = new books("lobson latin", 123);
+
+        book1.displayInfo();
+
+        books[] book = {book1 , book2, book3};
+
+        library library = new library("Kampala public library", 2018, book);
+        library.displayInfo();
+
+
+
+    }
+}
+
+public class library {
+  String name;
+  int year;
+    books[] book;
+
+    library( String name, int year, books[] book){
+     this.name = name;
+     this.year = year;
+     this.book = book;
+    }
+
+    void displayInfo(){
+        System.out.println("Welcome to the"+" "+ this.year +" "+ this.name );
+        System.out.println("Books available:");
+        for(books books: book){
+            System.out.println(books.displayInfo());
+        }
+    }
+}
+
+public class books {
+    String title;
+    int pages;
+
+    books( String title,int pages){
+        this.title = title;
+        this.pages = pages;
+    }
+    String displayInfo(){
+        return this.title + " " +(this.pages + "pages");
+    }
+}
+
+
