@@ -1,0 +1,26 @@
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Main{
+    public static void main(String[] args) throws IOException {
+        try (FileWriter writer = new FileWriter("C:\\Users\\HP\\Desktop\\excel.txt")) {
+         writer.write("its simply zodexele");
+            System.out.println("file has been written");
+        }
+        catch (FileNotFoundException b){
+            System.out.println("couldnt find this file location");
+        }
+        catch (IOException a){
+            System.out.println("couldn't write the file");
+
+        }
+
+
+
+
+
+
+    }
+
+}
