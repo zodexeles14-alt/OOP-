@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
+public class Main{
+    public  static void main(String[] args){
+        ArrayList<String> fruits = new ArrayList<>();
+
+        fruits.add("apple");
+        fruits.add("orange");
+        fruits.add("mango");
+        fruits.add("coconut");
+
+        //fruits.remove(0);
+        //fruits.set(0 ,"pineApple");
+//        System.out.println(fruits.get(0));
+        //System.out.println(fruits.size());
+        //System.out.println(fruits);
+
+        Collections.sort(fruits);
+        for(String fruit : fruits) {
+            System.out.println(fruit);
+        }
+    }
+}
